@@ -1,19 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generador de Hashes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluir crypto-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+
+
+    
+    <!-- Incluir scripts de hashes -->
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript" src="sha0.js"></script>
+    <script type="text/javascript" src="sha1.js"></script>
+    <script type="text/javascript" src="sha2.js"></script>
+    <script type="text/javascript" src="sha3.js"></script>
 </head>
 
-<body>
-    <h1>HELLO WORLD!</h1>
-</body>
-<script type="text/javascript" src="md5.js"></script>
-<script type="text/javascript" src="sha0.js"></script>
-<script type="text/javascript" src="sha1.js"></script>
-<script type="text/javascript" src="sha2.js"></script>
-<script type="text/javascript" src="sha3.js"></script>
 
+
+<body>
+    <h1>Generador de Hashes</h1>
+
+    <!-- MurmurHash -->
+    <div>
+        <h2>MurmurHash</h2>
+        <input type="text" id="murmurInput" placeholder="Ingresa un texto">
+        <button onclick="calcularMurmurHash()">Calcular MurmurHash</button>
+        <p id="murmurResult"></p>
+    </div>
+
+    <!-- CityHash -->
+    <div>
+        <h2>CityHash</h2>
+        <input type="text" id="cityInput" placeholder="Ingresa un texto">
+        <button onclick="calcularCityHash()">Calcular CityHash</button>
+        <p id="cityResult"></p>
+    </div>
+
+    <!-- FNV-1 -->
+    <div>
+        <h2>FNV-1</h2>
+        <input type="text" id="fnv1Input" placeholder="Ingresa un texto">
+        <button onclick="calcularFNV1Hash()">Calcular FNV-1</button>
+        <p id="fnv1Result"></p>
+    </div>
+
+    <!-- FNV-1a -->
+    <div>
+        <h2>FNV-1a</h2>
+        <input type="text" id="fnv1aInput" placeholder="Ingresa un texto">
+        <button onclick="calcularFNV1aHash()">Calcular FNV-1a</button>
+        <p id="fnv1aResult"></p>
+    </div>
+
+    <!-- XXHash -->
+    <div>
+        <h2>XXHash</h2>
+        <input type="text" id="xxInput" placeholder="Ingresa un texto">
+        <button onclick="calcularXXHash()">Calcular XXHash</button>
+        <p id="xxResult"></p>
+    </div>
+
+    <!-- MDA (Merkle-Damgård Construction) -->
+    <div>
+        <h2>MDA (Merkle-Damgård)</h2>
+        <input type="text" id="mdaInput" placeholder="Ingresa un texto">
+        <label for="mdaAlgorithm">Selecciona un algoritmo:</label>
+        <select id="mdaAlgorithm">
+            <option value="md5">MD5</option>
+            <option value="sha1">SHA-1</option>
+            <option value="sha256">SHA-256</option>
+        </select>
+        <button onclick="calcularMDAHash()">Calcular MDA</button>
+        <p id="mdaResult"></p>
+    </div>
+
+    <!-- Scripts adicionales -->
+    <script src="murmurHash.js"></script>
+    <script src="cityHash.js"></script>
+    <script src="fnv1Hash.js"></script>
+    <script src="fnv1aHash.js"></script>
+    <script src="xxHash.js"></script>
+    <script src="mdaHash.js"></script>
+</body>
 </html>
