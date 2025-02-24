@@ -61,6 +61,9 @@ function md5(str) {
     return (a.toString(16) + b.toString(16) + c.toString(16) + d.toString(16)).padStart(32, '0');
 }
 
-// Prueba
-console.log("Inicio MD5");
-console.log("Resultado MD5:", md5("Hola mundo"));
+
+function getMD5Hash() {
+    const input = document.getElementById("md5Input").value;
+    const hash = md5(input);
+    document.getElementById("md5Result").innerText = "MD5 Hash: " + hash.toString(16);
+}

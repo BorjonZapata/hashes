@@ -39,7 +39,8 @@ function sha3Init() {
     return new Array(25).fill(0n);
 }
 
-// Ejemplo de ejecución
-let state = sha3Init();
-keccakF(state);
-console.log("Estado final:", state);
+function getSHA3Hash() {
+    let state = sha3Init();
+    keccakF(state);
+    document.getElementById("sha3Result").innerText = "SHA3 Hash: " + state;
+}

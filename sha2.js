@@ -71,6 +71,8 @@ function sha256(message) {
     return state.map(x => x.toString(16).padStart(8, '0')).join('');
 }
 
-// Prueba
-console.log("Inicio SHA-2");
-console.log("Resultado SHA-2 (256):", sha256("Hola mundo"));
+function getSHA2Hash() {
+    const input = document.getElementById("sha2Input").value;
+    const hash = sha256(input);
+    document.getElementById("sha2Result").innerText = "SHA2 Hash: " + hash;
+}

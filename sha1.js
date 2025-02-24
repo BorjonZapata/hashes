@@ -85,6 +85,8 @@ function sha1(message) {
     return toHexStr(h0) + toHexStr(h1) + toHexStr(h2) + toHexStr(h3) + toHexStr(h4);
 }
 
-// Prueba
-console.log("Inicio SHA-1");
-console.log("Resultado SHA-1: ", sha1("Hola mundo"));
+function getSHA1Hash() {
+    const input = document.getElementById("sha1Input").value;
+    const hash = sha1(input);
+    document.getElementById("sha1Result").innerText = "SHA1 Hash: " + hash;
+}

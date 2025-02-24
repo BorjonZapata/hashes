@@ -93,6 +93,8 @@ function sha0(message) {
     return hash;
 }
 
-// Prueba
-console.log("Inicio SHA-0");
-console.log("Resultado SHA-0: ", sha0("Hola Mundo"));
+function getSHA0Hash() {
+    const input = document.getElementById("sha0Input").value;
+    const hash = sha0(input);
+    document.getElementById("sha0Result").innerText = "SHA0 Hash: " + hash;
+}

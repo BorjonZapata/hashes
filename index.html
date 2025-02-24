@@ -13,16 +13,54 @@
 </head>
 
 <body>
+    <h1>Generador de Hashes</h1>
+    
+    <!-- MD5 -->
+    <div>
+        <h2>MD5</h2>
+        <input type="text" id="md5Input" placeholder="Ingresa un texto">
+        <button onclick="getMD5Hash()">Calcular MD5</button>
+        <p id="md5Result"></p>
+    </div>
 
-    <h4>RIPEMD, BLAKE, Whirlpool, Tiger y Snefru</h4>
+    <!-- SHA0 -->
+    <div>
+        <h2>SHA0</h2>
+        <input type="text" id="sha0Input" placeholder="Ingresa un texto">
+        <button onclick="getSHA0Hash()">Calcular SHA0</button>
+        <p id="sha0Result"></p>
+    </div>
+
+    <!-- SHA1 -->
+    <div>
+        <h2>SHA1</h2>
+        <input type="text" id="sha1Input" placeholder="Ingresa un texto">
+        <button onclick="getSHA1Hash()">Calcular SHA1</button>
+        <p id="sha1Result"></p>
+    </div>
+
+    <!-- SHA2 -->
+    <div>
+        <h2>SHA2</h2>
+        <input type="text" id="sha2Input" placeholder="Ingresa un texto">
+        <button onclick="getSHA2Hash()">Calcular SHA2</button>
+        <p id="sha2Result"></p>
+    </div>
+
+    <!-- SHA3 -->
+    <div>
+        <h2>SHA3</h2>
+        <button onclick="getSHA3Hash()">Calcular SHA3</button>
+        <p id="sha3Result"></p>
+    </div>
+
+    <h2>RIPEMD, BLAKE, Whirlpool, Tiger y Snefru</h2>
     <div>
         <label for="inputString">Mensaje:</label>
         <input type="text" id="inputString">
         <button onclick="calculateHashes()">Calcular</button>
     </div>
     <div id="hashes"></div>
-
-    <h1>Generador de Hashes</h1>
 
     <!-- MurmurHash -->
     <div>
