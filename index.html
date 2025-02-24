@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Hashes</title>
+    <title>Integrando algoritmos hash</title>
+
     <link rel="stylesheet" href="styles.css">
     <!-- Incluir crypto-js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
-
-
-    
-    <!-- Incluir scripts de hashes -->
-    <script type="text/javascript" src="md5.js"></script>
-    <script type="text/javascript" src="sha0.js"></script>
-    <script type="text/javascript" src="sha1.js"></script>
-    <script type="text/javascript" src="sha2.js"></script>
-    <script type="text/javascript" src="sha3.js"></script>
+    <script src="hashes.js" defer></script>
 </head>
 
-
-
 <body>
+
+    <h4>RIPEMD, BLAKE, Whirlpool, Tiger y Snefru</h4>
+    <div>
+        <label for="inputString">Mensaje:</label>
+        <input type="text" id="inputString">
+        <button onclick="calculateHashes()">Calcular</button>
+    </div>
+    <div id="hashes"></div>
+
     <h1>Generador de Hashes</h1>
 
     <!-- MurmurHash -->
@@ -86,4 +86,9 @@
     <script src="xxHash.js"></script>
     <script src="mdaHash.js"></script>
 </body>
+<script type="text/javascript" src="md5.js"></script>
+<script type="text/javascript" src="sha0.js"></script>
+<script type="text/javascript" src="sha1.js"></script>
+<script type="text/javascript" src="sha2.js"></script>
+<script type="text/javascript" src="sha3.js"></script>
 </html>
